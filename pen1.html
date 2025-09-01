@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customised Pen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white shadow-lg rounded-2xl p-6 max-w-md w-full text-center">
+    <!-- Pen Image -->
+    <img src="https://tse4.mm.bing.net/th/id/OIP.Q36x1G4cTpNjRQILKFowrAHaHa?pid=Api&P=0&h=180" 
+         alt="Customised Pen" 
+         class="mx-auto w-40 mb-4">
+
+    <!-- Title -->
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">Customised Pen</h2>
+    <p class="text-gray-600 mb-4">Add your name and make it unique ✨</p>
+
+    <!-- Input for Name -->
+    <input id="nameInput" 
+           type="text" 
+           placeholder="Enter your name" 
+           class="border rounded-lg w-full px-3 py-2 mb-4 focus:ring-2 focus:ring-pink-400 outline-none">
+
+    <!-- Preview -->
+    <div class="bg-pink-50 border border-pink-200 rounded-lg p-4 mb-4">
+      <p class="text-gray-500">Preview:</p>
+      <p id="previewName" class="font-semibold text-lg text-pink-600">Your Name</p>
+    </div>
+
+    <!-- Button -->
+    <button class="bg-pink-500 text-white px-5 py-2 rounded-xl hover:bg-pink-600 transition">
+      Add to Cart 🛒
+    </button>
+  </div>
+
+  <script>
+    // Live preview of name
+    const input = document.getElementById("nameInput");
+    const preview = document.getElementById("previewName");
+
+    input.addEventListener("input", () => {
+      preview.textContent = input.value || "Your Name";
+    });
+  </script>
+
+</body>
+</html>
